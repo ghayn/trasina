@@ -1,0 +1,19 @@
+#!/usr/bin/env ruby
+def _message_
+  puts "Running in process #{Process.pid}"
+  puts "Welcome to Trasina(#{_version_}) console. Loading #{_environment_} environment..."
+end
+
+def _version_
+  File.read(".trasina.lock").strip!
+end
+
+def _environment_
+  ENV['RACK_ENV']
+end
+
+system "clear"
+_message_
+require './app'
+require "irb"
+IRB.start

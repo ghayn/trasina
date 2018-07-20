@@ -1,0 +1,2 @@
+class ApplicationModel
+end
