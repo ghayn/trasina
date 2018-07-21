@@ -13,8 +13,6 @@ end
 
 group :development, :test do
   gem 'rspec', require: false
+  gem 'rake'
   gem 'rack-test'
-end
-
-group :test do
 end
