@@ -16,3 +16,7 @@ group :development, :test do
   gem 'rake'
   gem 'rack-test'
 end
+
+group :test do
+  gem 'codecov', :require => false
+end
