@@ -3,7 +3,7 @@ services:
   main:
     build: ./docker
     image: trasina/base
-    env_file: .env.development
+    env_file: .env
     networks:
       - default
       - internal_network
