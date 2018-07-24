@@ -1,20 +1,20 @@
 source 'https://rubygems.org'
 
-gem 'sinatra'
-gem 'sinatra-contrib'
-gem 'dotenv'
-gem 'puma'
-gem 'rack-cors'
+gem 'sinatra', '~> 2.0.0'
+gem 'sinatra-contrib', '~> 2.0.0'
+gem 'dotenv', '~> 2.5.0'
+gem 'puma', '~> 3.12.0'
+gem 'rack-cors', '~> 1.0.0'
 
 group :development do
-  gem 'pry'
-  gem 'rubocop-airbnb'
+  gem 'pry', '~> 0.11.0'
+  gem 'rubocop-airbnb', '~> 1.5.0'
 end
 
 group :development, :test do
-  gem 'rspec', require: false
-  gem 'rake'
-  gem 'rack-test'
+  gem 'rspec', '~> 3.7.0',require: false
+  gem 'rake', '~> 12.3.0'
+  gem 'rack-test', '~> 1.1.0'
 end
 
 group :test do

@@ -98,16 +98,16 @@ PLATFORMS
 
 DEPENDENCIES
   codecov
-  dotenv
-  pry
-  puma
-  rack-cors
-  rack-test
-  rake
-  rspec
-  rubocop-airbnb
-  sinatra
-  sinatra-contrib
+  dotenv (~> 2.5.0)
+  pry (~> 0.11.0)
+  puma (~> 3.12.0)
+  rack-cors (~> 1.0.0)
+  rack-test (~> 1.1.0)
+  rake (~> 12.3.0)
+  rspec (~> 3.7.0)
+  rubocop-airbnb (~> 1.5.0)
+  sinatra (~> 2.0.0)
+  sinatra-contrib (~> 2.0.0)
 
 BUNDLED WITH
    1.16.2
