@@ -3,10 +3,6 @@ require_relative 'config/boot'
 class Trasina < Sinatra::Base
   set :root, File.dirname(__FILE__)
 
-  configure :development do
-    register Sinatra::Reloader
-  end
-
   use Rack::Cors do
     allow do
       origins '*'
