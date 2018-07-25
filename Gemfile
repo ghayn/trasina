@@ -5,6 +5,8 @@ gem 'sinatra-contrib', '~> 2.0.0'
 gem 'dotenv', '~> 2.5.0'
 gem 'puma', '~> 3.12.0'
 gem 'rack-cors', '~> 1.0.0'
+gem 'pg', '~> 1.0'
+gem 'sequel', '~> 5.10.0'
 
 group :development do
   gem 'pry', '~> 0.11.0'
