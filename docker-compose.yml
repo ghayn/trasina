@@ -1,5 +1,13 @@
 version: '3'
 services:
+  db:
+    image: postgres:10.4-alpine
+    env_file: .env
+    networks:
+      - internal_network
+    volumes:
+      - "pg_data:/var/lib/postgresql/data"
+      - ".:/app"
   main:
     build: ./docker
     image: trasina/base
@@ -23,4 +31,5 @@ networks:
       name: default-network
 
 volumes:
+  pg_data:
   ruby_bundle:

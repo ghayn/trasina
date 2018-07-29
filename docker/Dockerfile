@@ -4,7 +4,7 @@ RUN apt-get update
 
 # DEBIAN_DPKGS BEGIN
 RUN set -ex \
-  && apt-get install -y --no-install-recommends ca-certificates curl git-core htop screen apt-transport-https vim bzip2 libfontconfig
+  && apt-get install -y --no-install-recommends ca-certificates curl git-core htop screen apt-transport-https vim bzip2 libfontconfig postgresql-client
 
 # DEBIAN_DPKGS END
 
