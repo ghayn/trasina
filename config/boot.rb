@@ -6,7 +6,7 @@ Bundler.require(:default, ENV['RACK_ENV'].to_sym)
 
 Dotenv.overload ".env.#{ENV['RACK_ENV']}"
 
-puts "Connect Postgres DB..."
+puts "Connecting DataBase..."
 Sequel::Model.db = Sequel.connect(
   adapter: :postgres,
   user: ENV["POSTGRES_USER"],
@@ -16,6 +16,6 @@ Sequel::Model.db = Sequel.connect(
   max_connections: ENV["THREAD_COUNT"],
   database: "#{ENV['POSTGRES_DATABASE_BASE_NAME']}_#{ENV["RACK_ENV"]}"
 )
-puts "Connect Postgres DB complete."
+puts "Connect Database complete."
 
 Dir["./app/**/*.rb"].each { |file| require file }
