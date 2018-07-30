@@ -57,6 +57,24 @@ namespace :db do
       db.execute "DROP DATABASE IF EXISTS #{database}"
     end
   end
+
+  desc "Run migrations"
+  task :migrate, [:version] do |t, args|
+    require "sequel/core"
+    Sequel.extension :migration
+    version = args[:version].to_i if args[:version]
+    database = "#{ENV['POSTGRES_DATABASE_BASE_NAME']}_#{ENV["RACK_ENV"]}"
+    Sequel.connect(
+      adapter: :postgres,
+      user: ENV["POSTGRES_USER"],
+      password: ENV["POSTGRES_PASSWORD"],
+      host: 'db',
+      port: ENV["POSTGRES_PORT"],
+      database: database
+    ) do |db|
+      Sequel::Migrator.run(db, "db/migrations", target: version)
+    end
+  end
 end
 
 task :default => ['specs']
