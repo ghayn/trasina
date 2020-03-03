@@ -15,7 +15,7 @@ end
 
 group :development, :test do
   gem 'rspec', '~> 3.7.0',require: false
-  gem 'rake', '~> 12.3.0'
+  gem 'rake', '~> 13.0.1'
   gem 'rack-test', '~> 1.1.0'
 end
 
